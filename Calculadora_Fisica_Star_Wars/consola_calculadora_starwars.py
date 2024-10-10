@@ -1,0 +1,63 @@
+import calculadora_fisica_star_wars as cfsw
+def consola ():
+    print ("Bienvenido almirante")
+    print ("Por favor seleccione que desea calcular")
+    print ("1. calculo fuerza gravedad")
+    print ("2. calculo constante K")
+    print ("3. calculo periodo")
+    print ("4. calculo distancia media")
+    print ("5. calculo magnitud de la fuerza")
+    print ("6. calculo velocidad final nave")
+    seleccion = int(input ("Por favor seleccione una de las siguientes opciones: "))
+    match seleccion:
+        case 1: 
+            masa_1 = float(input("Por favor indique la masa del planeta 1: "))
+            masa_2 = float(input("Por favor indique la masa del planeta 2: "))
+            distancia = float(input("Por favor indique la distancia entre los 2 planetas: "))
+            print ("la fuerza de atraccion entre los 2 cuerpos es", end=" ")
+            print (cfsw.calcular_fuerza_gravedad (masa_1, masa_2, distancia), end=" ")
+            print ("Newtons")
+            consola () 
+        case 2:
+            masa = float(input("Por favor indique la masa del planeta: "))
+            print ("la constante K equivale a", end= " ")
+            print (cfsw.calcular_constante_K (masa), end=" ")
+            print ("s2/m3")
+            consola () 
+        case 3:
+            masa = float(input("Por favor indique la masa del planeta: "))
+            distancia_media = float(input("Por favor la distancia media: "))
+            print ("el periodo equivale a", end= " ")
+            print (cfsw.calcular_periodo(masa,distancia_media), end=" ")
+            print ("segundos")
+            consola () 
+        case 4:
+            masa = float(input("Por favor indique la masa del planeta: "))
+            periodo = float(input("Por favor indique el periodo"))
+            print ("la distancia media equivale a", end= " ")
+            print (cfsw.calcular_distancia_media(masa, periodo), end=" ")
+            print ("metros")
+            consola () 
+        case 5:
+            masa = float(input("Por favor indique la masa del cuerpo "))
+            vf = float(input("Por favor indique la velocidad final"))
+            vi = float(input("Por favor indique la velocidad inicial"))
+            dt = float(input("Por favor indique la velocidad fen el transcurso"))
+            print ("la magnitud de fuerza es de", end= " ")
+            print (cfsw.calcular_magnitud_de_la_fuerza(masa, vf, vi, dt), end=" ")
+            print ("N (m/s2)")
+            consola () 
+        case 6:
+            masa_1 = float(input("Por favor indique la masa del cuerpo "))
+            masa_2 = float(input("Por favor indique la masa del cuerpo "))
+            velocidad_1 = float(input("Por favor indique la velocidad del cuerpo "))
+            velocidad_2 = float(input("Por favor indique la velocidad del cuerpo "))
+            print ("la velocidad de colision es de", end=" ")
+            print (cfsw.calcular_velocidad_colision(masa_1, masa_2, velocidad_1, velocidad_2), end= " ")
+            print ("m/s")
+            consola () 
+        case _:
+            print ("Seleccione una opcion correcta")
+            consola () 
+consola ()
+            
