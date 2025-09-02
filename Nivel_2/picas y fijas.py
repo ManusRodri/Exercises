@@ -88,4 +88,4 @@ def picas_fijas (numero_secreto:int, intento:int) -> dict:
     return {"Picas": picas, "Fijas": fijas}
     
     
-print (picas_fijas(1263,1238),)
+print (picas_fijas(1283,1238),)
