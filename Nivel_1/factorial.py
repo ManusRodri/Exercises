@@ -6,5 +6,4 @@ def factorial(n: int) -> int:
         resultado *= i
     return resultado
 
-# Ejemplo de uso
-print(factorial(7))  # 120
+print(factorial(7))
