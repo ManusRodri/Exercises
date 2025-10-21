@@ -6,4 +6,4 @@ def factorial(n: int) -> int:
         resultado *= i
     return resultado
 
-print(factorial(512))
+print(factorial(5000))
